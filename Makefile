@@ -11,5 +11,8 @@ deploy_sway:
 	mkdir -p ~/.config/sway; cp -r ./sway* ~/.config/sway/.
 	chmod +x ~/.config/sway/scripts/waybar.sh
 
+install_sway_deps_aur:
+	paru -S ydotool
+
 install_sway_deps_arch:
 	pacman -S jq
