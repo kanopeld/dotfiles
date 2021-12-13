@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+focused_app_data=$(swaymsg -t get_tree | jq ".. | select(.type?) | select(.focused==true) ")
+focused_app_id=$( echo "$focused_app_data" | jq ".id" | head -n 1)
+
+echo $focused_app_data
+
+echo $focused_app_id
+echo "come testing [$focused_app_id]"
+swaymsg '[class="Chromium-browser" title="Google Meet"]' focus 2>/dev/null && ydotool key Ctrl+d 1>/dev/null 2>/dev/null && swaymsg "[con_id=$focused_app_id]" focus
