@@ -1,0 +1,10 @@
+/dev
+/media
+/mnt
+/proc
+/run
+/sys
+/tmp
+/var/tmp
+.ssh
+go/pkg/*

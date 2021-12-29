@@ -8,11 +8,9 @@ collect:
 	rsync -r ~/.zshrc ./zsh
 	rsync -r ~/.vimrc ./vim
 
-.PHONY: prepare_dirs
-prepare_dirs:
-	sudo mkdir -p /var/log/usr
-	sudo chown -R $(USER):$(USER) /var/log/usr
-
 deploy_sway:
-	mkdir -p ~/.config/sway; cp -r ./sway* ~/.config/sway/.
+	mkdir -p ~/.config/sway; rm -rf ~/.config/sway/*; \cp -r ./sway/* ~/.config/sway/.
 	chmod +x ~/.config/sway/scripts/waybar.sh
+
+	# set dotfiles env
+	echo 'set $$dotfiles_path $(shell pwd)' >> ~/.config/sway/config.d/00-base.conf

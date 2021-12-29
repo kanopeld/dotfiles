@@ -110,8 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
-export GOROOT=$(go env GOROOT)
-export GOPATH=$(go env GOPATH) 
+
 export _JAVA_AWT_WM_NONREPARENTING=1
