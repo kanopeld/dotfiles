@@ -9,7 +9,8 @@ collect:
 	rsync -r ~/.vimrc ./vim
 
 deploy_sway:
-	mkdir -p ~/.config/sway; rm -rf ~/.config/sway/*; \cp -r ./sway/* ~/.config/sway/.
+	mkdir -p ~/.config/sway
+	rsync -r ./sway/* ~/.config/sway/
 	chmod +x ~/.config/sway/scripts/waybar.sh
 
 	# set dotfiles env
