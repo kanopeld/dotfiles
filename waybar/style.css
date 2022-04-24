@@ -51,8 +51,8 @@
 
 /* The whole bar */
 #waybar {
-    background: @theme_bg_color;
-    color: @wm_icon_bg;
+    background: #000000;
+    color: #ffffff;
     font-size: 14px;
 }
 

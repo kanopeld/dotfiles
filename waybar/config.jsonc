@@ -11,8 +11,6 @@
     // Global configuration
     // -------------------------------------------------------------------------
 
-    "output": ["DP-1", "DP-2"],
-
     "layer": "top",
 
     // If height property would be not present, it'd be calculated dynamically
