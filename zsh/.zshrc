@@ -112,3 +112,17 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 export _JAVA_AWT_WM_NONREPARENTING=1
+export PATH=$PATH:/usr/local/go/bin
+
+#ALIASES
+alias arch3="ssh dbtest@23.88.82.194 -p 12956"
+alias arch3cp="scp -P 12956 dbtest@23.88.82.194"
+
+alias arch6="ssh dbtest@168.119.44.208 -p 26335"
+alias arch6cp="scp -P 26335 dbtest@168.119.44.208"
+
+alias arch5="ssh dbtest@49.12.88.152 -p 15200"
+alias arch5cp="scp -P 15200 dbtest@49.12.88.152"
+
+alias arch2="ssh dbtest@195.201.78.74 -p 26000"
+alias arch2cp="scp -p 26000 dbtest@195.201.78.74"

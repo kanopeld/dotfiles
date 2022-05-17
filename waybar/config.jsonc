@@ -18,13 +18,12 @@
     "position": "top",
 
     "modules-left": ["sway/workspaces", "custom/scratchpad"],
-    "modules-center": ["sway/mode", "custom/weather"],
+    "modules-center": ["sway/mode", "custom/weather", "tray"],
     "modules-right": [
         // informational
         "sway/language",
         "cpu",
         "memory",
-        "battery",
         //"temperature",
 
         // connecting
@@ -38,8 +37,8 @@
         // system
         "custom/pacman",
 
-        "tray",
-        "clock"
+        "clock",
+        "battery"
     ],
 
     // -------------------------------------------------------------------------
@@ -56,7 +55,7 @@
 
     "cpu": {
         "interval": 2,
-        "format": "﬙ {usage}%",
+        "format": "CPU: {usage}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -66,12 +65,17 @@
 
     "memory": {
         "interval": 2,
-        "format": " {}%",
+        "format": "RAM: {}%",
         "states": {
             "warning": 70,
             "critical": 90
         },
         "on-click": "swaymsg exec \\$term_float htop"
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
 
     "network": {
@@ -98,7 +102,7 @@
 
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon} {volume}%{format_source}",
+        "format": "VOL: {volume}%{format_source}",
         "format-muted": "婢 {format_source}",
         "format-source": "",
         "format-source-muted": " ",
@@ -108,7 +112,7 @@
             "default": ["奄", "奔", "墳"]
         },
         "tooltip-format": "{icon} {volume}% {format_source}",
-        "on-click": "swaymsg exec \\$pulseaudio"
+        "on-click": "swaymsg exec pavucontrol"
     },
 
     "temperature": {
