@@ -15,7 +15,7 @@
 
     // If height property would be not present, it'd be calculated dynamically
     "height": 24,
-    "position": "top",
+    "position": "bottom",
 
     "modules-left": ["sway/workspaces", "custom/scratchpad"],
     "modules-center": ["sway/mode", "custom/weather", "tray"],
@@ -80,9 +80,9 @@
 
     "network": {
         "interval": 2,
-        "format-wifi": " ",
+        "format-wifi": "{ifname}: {ipaddr}/{cidr}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-        "format-disconnected": "睊",
+        "format-disconnected": "DISCONNECTED",
         "tooltip-format": "{ifname} ({essid}): {ipaddr}",
         "on-click": "swaymsg exec \\$term_float nmtui"
     },
@@ -178,6 +178,6 @@
 
     "custom/weather": {
         "interval": 3600,
-        "exec": "curl 'https://wttr.in/?format=1'"
+        "exec": "curl 'https://wttr.in/Tbilisi?m&format=3'"
     }
 }

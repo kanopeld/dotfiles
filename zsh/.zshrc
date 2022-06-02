@@ -78,6 +78,9 @@ plugins=(
     zsh-autosuggestions 
     zsh-syntax-highlighting 
     zsh-z 
+    dnf
+    golang
+    docker
 )
 
 source $ZSH/oh-my-zsh.sh

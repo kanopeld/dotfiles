@@ -51,7 +51,7 @@
 
 /* The whole bar */
 #waybar {
-    background: #000000;
+    background: #1d1f21;
     color: #ffffff;
     font-size: 14px;
 }
@@ -156,7 +156,7 @@
 }
 
 #network {
-    background: @theme_selected_bg_color;
+    background-color: #16A085;
     color: #000000;
 }
 
@@ -184,18 +184,19 @@
     padding-bottom: 2px;
     padding-left: 4px;
     padding-right: 4px;
-    color: @theme_selected_bg_color;
+    background-color: #16A085;
+    color: #000000;
 }
 
 #workspaces button.focused {
-    border-color: @theme_selected_bg_color;
-    color: @wm_icon_bg;
-    background-color: @theme_selected_bg_color;
+    /*border-color: @theme_selected_bg_color;*/
+    color: #ffffff;
+    background-color: #094236;
 }
 
 #workspaces button.urgent {
-    border-color: @error_color;
-    color: @error_color;
+    border-color: #c10c0a;
+    color: #c10c0a;
 }
 
 #custom-pacman {
