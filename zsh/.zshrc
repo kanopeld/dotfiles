@@ -129,3 +129,9 @@ alias arch5cp="scp -P 15200 dbtest@49.12.88.152"
 
 alias arch2="ssh dbtest@195.201.78.74 -p 26000"
 alias arch2cp="scp -p 26000 dbtest@195.201.78.74"
+
+
+#minio creds for restic
+export AWS_ACCESS_KEY_ID=CSGnwipGUoaDJPKx
+export AWS_SECRET_ACCESS_KEY=UeUnUFpTfckcM2eE2NxIZf9oUABhn5EF
+export RESTIC_REPOSITORY=s3:http://65.21.7.127:9000/restic
