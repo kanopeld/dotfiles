@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/home/johnd/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,6 +71,7 @@ ZSH_THEME="alanpeabody"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( 
+    dnf
     fzf 
     git 
     history-substring-search 
@@ -78,9 +79,6 @@ plugins=(
     zsh-autosuggestions 
     zsh-syntax-highlighting 
     zsh-z 
-    dnf
-    golang
-    docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,27 +109,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias nbg1="ssh -p 23518 root@2001:8b0:2c1:69::1"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
+
+export PATH=$PATH:/home/johnd/go/bin
+
 export _JAVA_AWT_WM_NONREPARENTING=1
-export PATH=$PATH:/usr/local/go/bin
-
-#ALIASES
-alias arch3="ssh dbtest@23.88.82.194 -p 12956"
-alias arch3cp="scp -P 12956 dbtest@23.88.82.194"
-
-alias arch6="ssh dbtest@168.119.44.208 -p 26335"
-alias arch6cp="scp -P 26335 dbtest@168.119.44.208"
-
-alias arch5="ssh dbtest@49.12.88.152 -p 15200"
-alias arch5cp="scp -P 15200 dbtest@49.12.88.152"
-
-alias arch2="ssh dbtest@195.201.78.74 -p 26000"
-alias arch2cp="scp -p 26000 dbtest@195.201.78.74"
-
-
-#minio creds for restic
-export AWS_ACCESS_KEY_ID=CSGnwipGUoaDJPKx
-export AWS_SECRET_ACCESS_KEY=UeUnUFpTfckcM2eE2NxIZf9oUABhn5EF
-export RESTIC_REPOSITORY=s3:https://minio.chlorine9.net/restic
+export WAYLAND_DISPLAY=""
