@@ -6,6 +6,6 @@ install:
 	rsync -avr --update ./waybar ~/.config/waybar
 
 collect:
-	rsync -avr --update ~/.config/alacritty ./alacritty
-	rsync -avr --update ~/.config/sway ./sway
-	rsync -avr --update ~/.config/waybar ./waybar
+	rsync -avr --update ~/.config/alacritty .
+	rsync -avr --update ~/.config/sway .
+	rsync -avr --update ~/.config/waybar .

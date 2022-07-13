@@ -17,27 +17,21 @@
     "height": 24,
     "position": "bottom",
 
-    "modules-left": ["sway/workspaces", "custom/scratchpad"],
+    "modules-left": ["sway/workspaces", "network", "cpu", "memory"],
     "modules-center": ["sway/mode", "custom/weather", "tray"],
     "modules-right": [
         "temperature",
-        // informational
         "sway/language",
-        "cpu",
-        "memory",
-        //"temperature",
 
         // connecting
-        "network",
         //"bluetooth",
 
         // media
         "idle_inhibitor",
         "pulseaudio",
 
+        "custom/dnf",
         // system
-        "custom/pacman",
-
         "clock",
         "battery"
     ],
@@ -78,7 +72,7 @@
     },
 
     "network": {
-        "interval": 2,
+        "interval": 30,
         "format-wifi": "{ifname}: {ipaddr}/{cidr}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
         "format-disconnected": "DISCONNECTED",
@@ -101,8 +95,8 @@
 
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "vol: {volume}%{format_source}",
-        "format-muted": "婢 {format_source}",
+        "format": "vol:{volume}%",
+        "format-muted": "MUTED",
         "format-source": "",
         "format-source-muted": " MUTED",
         "format-icons": {
@@ -125,7 +119,7 @@
     },
 
     "tray": {
-        "icon-size": 21,
+        "icon-size": 18,
         "spacing": 5
     },
 
@@ -184,7 +178,13 @@
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     // "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C ",
-        "format": "{temperatureC}°C "
+        "format": "{temperatureC}°C"
+    },
+    "custom/dnf": {
+        "format": "{} UPDATES",
+        "interval": 3600,
+        "exec-if": "[ $(dnf check-update -q | wc -l) -gt 0 ]",
+        "exec": "dnf check-update -q | wc -l"
     }
 }
 

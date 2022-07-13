@@ -156,20 +156,21 @@
 }
 
 #network {
-    background-color: #16A085;
-    color: #000000;
+    /*background-color: #16A085;*/
+    margin-left: 16px;
+    color: #16A085;
 }
 
 #network.disconnected {
-    color: @warning_color;
+    color: #ba0000;
 }
 
 #pulseaudio.muted {
-    color: @warning_color;
+    color: #ba0000;
 }
 
 #temperature.critical {
-    color: @error_color;
+    color: #ba0000;
 }
 
 #window {
@@ -201,6 +202,10 @@
 
 #custom-pacman {
     color: @warning_color;
+}
+
+#custom-dnf {
+    color: #ba0000
 }
 
 #bluetooth.disabled {
