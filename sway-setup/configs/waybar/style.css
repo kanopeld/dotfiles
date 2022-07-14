@@ -205,7 +205,10 @@
 }
 
 #custom-dnf {
-    color: #ba0000
+    color: #ffffff;
+    margin: 0 4px 0 4px;
+    padding: 0 4px 0 4px;
+    background-color: #ba0000;;
 }
 
 #bluetooth.disabled {
