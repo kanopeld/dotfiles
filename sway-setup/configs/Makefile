@@ -1,9 +1,9 @@
 .PHONY: install
 
 install:
-	rsync -avr --update ./alacritty ~/.config/alacritty
-	rsync -avr --update ./sway ~/.config/sway
-	rsync -avr --update ./waybar ~/.config/waybar
+	rsync -avr --update ./alacritty ~/.config/
+	rsync -avr --update ./sway ~/.config/
+	rsync -avr --update ./waybar ~/.config/
 
 collect:
 	rsync -avr --update ~/.config/alacritty .

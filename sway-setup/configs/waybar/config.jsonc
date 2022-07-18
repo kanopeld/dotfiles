@@ -23,9 +23,6 @@
         "temperature",
         "sway/language",
 
-        // connecting
-        //"bluetooth",
-
         // media
         "idle_inhibitor",
         "pulseaudio",
@@ -142,8 +139,8 @@
         "format": "{icon}",
         "interval": 30,
         "format-icons": {
-            "enabled": "",
-            "disabled": ""
+            "enabled": "on",
+            "disabled": "off"
         },
         "on-click": "blueberry",
         "tooltip-format": "{}"
