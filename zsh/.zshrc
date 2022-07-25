@@ -8,7 +8,7 @@ export ZSH="/home/johnd/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="alanpeabody"
+ZSH_THEME="candy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -109,7 +109,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias nbg1="ssh -p 23518 root@2001:8b0:2c1:69::1"
+# PERSONAL ALIASES
+
+alias nbg1="ssh -p 23518 root@fd01:8b0:2c1::1"
+alias ahbn1="ssh -p 21 root@5.161.113.190"
+
+# WORK ALIASES
+alias archive2="ssh dbtest@195.201.78.74 -p 26000"
+alias archive3="ssh dbtest@23.88.82.194 -p 12956"
+alias bo_psql="ssh -p 23895 devaggr@162.55.131.35 "
+alias cur1_archive="ssh -p 26335 dbtest@168.119.44.208"
+alias cur2_archive="ssh -p 15200 dbtest@49.12.88.152"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
