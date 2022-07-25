@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # PERSONAL ALIASES
 
 alias nbg1="ssh -p 23518 root@fd01:8b0:2c1::1"
-alias ahbn1="ssh -p 21 root@5.161.113.190"
+alias abrn1="ssh -p 26000 root@5.161.113.190"
 
 # WORK ALIASES
 alias archive2="ssh dbtest@195.201.78.74 -p 26000"
